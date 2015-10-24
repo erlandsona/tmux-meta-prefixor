@@ -65,7 +65,7 @@ bind-key -n    M-'$' command-prompt -I "#S" "rename-session '%%'"
 bind-key -n      M-( switch-client -p # Move to previous session
 bind-key -n      M-) switch-client -n # Move to next session
 bind-key -n      M-C run ~/.tmux/plugins/tmux-sessionist/scripts/new_session_prompt.sh
-bind-key -n      M-X run ~/.tmux/plugins/tmux-sessionist/scripts/kill_session_prompt.sh
+bind-key -n      M-X run "~/.tmux/plugins/tmux-sessionist/scripts/kill_session_prompt.sh '#{session_name}' '#{session_id}'"
 bind-key -n      M-g run ~/.tmux/plugins/tmux-sessionist/scripts/goto_session.sh
 # Redraw the client (if interrupted by wall, etc)
 bind-key -n      M-R refresh-client
