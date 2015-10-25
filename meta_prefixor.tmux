@@ -8,14 +8,11 @@
 # Generic Commands
 
 # First unbind *default* keybindings
-tmux source-file ~/.tmux.unbind.conf
+tmux source-file $CURRENT_DIR/.tmux.unbind.conf
 
 # Now reinsert all the regular tmux keys with the -n flag for no prefix.
 tmux bind -n          M-? list-keys # HELP! Keyboard-Shorcuts
 tmux bind -n          M-: command-prompt
-
-# Force reload of config file
-tmux bind -n          M-r source-file ~/.tmux.conf \; display-message "Config reloaded..."
 
 #####################################################
 # Window Commands: EG. Tmux Tabs
